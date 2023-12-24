@@ -23,9 +23,10 @@
       <!-- ini adalah popup akun-->
       <div
         id="account-modal"
-        class="absolute z-50 left-[18vw] top-[34vh] hidden"
+        class="fixed z-30 left-[18vw] top-[34vh] hidden"
       >
         <i
+          onclick="closeAccount()"
           class="fa-solid fa-xmark absolute text-white right-2 top-2 cursor-pointer"
         ></i>
         <div class="bg-slate-700 text-white rounded-md">
@@ -37,6 +38,7 @@
             </div>
           </div>
           <div
+          onclick="openEditAccount()"
             class="px-6 py-4 border-t cursor-pointer hover:bg-slate-500 rounded-b-md"
           >
             <i class="fa-solid fa-pen-to-square"></i>
@@ -48,7 +50,7 @@
       <!-- Ini adalah pop up edit akun -->
       <div
         id="account-edit-modal"
-        class="absolute z-50 left-[45%] top-[40%] hidden"
+        class="fixed z-50 left-[45%] top-[40%] hidden"
       >
         <div class="bg-slate-700 text-white rounded-md">
           <div class="text-center pt-4 font-bold">Edit Akun</div>
@@ -63,6 +65,7 @@
           </form>
           <div class="flex border-t justify-between">
             <div
+            onclick="closeEditAccount()"
               class="px-6 py-4 cursor-pointer hover:bg-red-500 rounded-bl-md"
             >
               <span class="">Batal</span>
@@ -120,6 +123,7 @@
               <span id="riwayat" class="ml-3">Riwayat&nbsp;Tugas</span>
             </li>
             <li
+              onclick="openAccount()"
               class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300 cursor-pointer flex items-center"
             >
               <i class="fa-solid fa-user-large py-1"></i>
@@ -138,11 +142,12 @@
 
       <!-- Ini adalah main content -->
       <main class="ml-2 w-screen">
-        <div class="bg-fuchsia-300 w-32"></div>
+        <div class="bg-fuchsia-300 w-32 h-[2000px]"></div>
       </main>
     </div>
 
     <!-- Ini adalah script untuk fungsi buka tutup sidebar -->
     <script src="js/sidebar.js"></script>
+    <script src="js/account.js"></script>
   </body>
 </html>
