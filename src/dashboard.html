@@ -68,15 +68,90 @@
             class="text-mb px-4 py-2 rounded-md hover:bg-red-500 duration-300 cursor-pointer flex items-center gap-2"
           >
             <i class="fa-solid fa-right-from-bracket py-1"></i>
-            <span id="keluar" >Keluar</span>
+            <span id="keluar">Keluar</span>
           </div>
         </div>
       </nav>
-      <main class="ml-2 w-screen">
-        <div class="bg-fuchsia-300 w-32"></div>
+      <main class="mx-10 my-12 w-screen">
+        <!-- container untuk status -->
+        <div id="stat-container" class="flex justify-between">
+          <div
+            id="task-finish"
+            class="flex-col border rounded-md shadow-md w-72"
+          >
+            <div class="flex items-center justify-between px-6 py-4">
+              <div class="flex-col">
+                <div class="mb-2 text-2xl font-semibold">0</div>
+                <div class="font-semibold">Tugas Selesai</div>
+              </div>
+              <i class="fa-solid fa-list-check text-2xl"></i>
+            </div>
+            <div
+              class="flex justify-between items-center bg-green-500 px-6 py-4 rounded-b-md text-white cursor-pointer"
+            >
+              <span class="font-semibold">Lihat Detail</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+          <div
+            id="task-deadline"
+            class="flex-col border rounded-md shadow-md w-72"
+          >
+            <div class="flex items-center justify-between px-6 py-4">
+              <div class="flex-col">
+                <div class="mb-2 text-2xl font-semibold">0</div>
+                <div class="font-semibold">Tugas Deadline</div>
+              </div>
+              <i class="fa-solid fa-hourglass-end text-2xl"></i>
+            </div>
+            <div
+              class="flex justify-between items-center bg-red-500 px-6 py-4 rounded-b-md text-white cursor-pointer"
+            >
+              <span class="font-semibold">Lihat Detail</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+          <div
+            id="task-unfinish"
+            class="flex-col border rounded-md shadow-md w-72"
+          >
+            <div class="flex items-center justify-between px-6 py-4">
+              <div class="flex-col">
+                <div class="mb-2 text-2xl font-semibold">0</div>
+                <div class="font-semibold">Tugas Belum Selesai</div>
+              </div>
+              <i class="fa-solid fa-list text-2xl"></i>
+            </div>
+            <div
+              class="flex justify-between items-center bg-yellow-500 px-6 py-4 rounded-b-md text-white cursor-pointer"
+            >
+              <span class="font-semibold">Lihat Detail</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+          <div
+            id="task-amount"
+            class="flex-col border rounded-md shadow-md w-72"
+          >
+            <div class="flex items-center justify-between px-6 py-4">
+              <div class="flex-col">
+                <div class="mb-2 text-2xl font-semibold">0</div>
+                <div class="font-semibold">Jumlah Tugas</div>
+              </div>
+              <i class="fa-solid fa-book text-2xl"></i>
+            </div>
+            <div
+              class="flex justify-between items-center bg-blue-500 px-6 py-4 rounded-b-md text-white cursor-pointer"
+            >
+              <span class="font-semibold">Lihat Detail</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <!-- container untuk tugas yang dekat deadline -->
       </main>
     </div>
 
-    <script></script>
+    <script src="js/sidebar.js"></script>
   </body>
 </html>
