@@ -14,42 +14,89 @@
   </head>
   <body>
     <div id="content" class="flex">
-      <nav class="py-8 px-4 bg-slate-700 w-[20vw] h-screen sticky top-0">
+      <nav
+        id="sidebar"
+        class="py-8 px-4 bg-slate-700 w-[20vw] h-screen sticky top-0 duration-300"
+      >
+        <div
+          onclick="Open()"
+          class="absolute -right-2 top-[10vh] bg-white px-2 py-1 rounded-md cursor-pointer"
+        >
+          <i
+            id="toggle-sidebar"
+            class="fa-solid fa-caret-left text-slate-700 duration-300"
+          ></i>
+        </div>
         <div class="text-white">
-          <h1 class="text-2xl font-bold mb-10 ml-4 mt-2">
-            <i class="fa-solid fa-graduation-cap"></i> 
-            <span>UnTask</span>
+          <h1
+            class="text-2xl font-bold mb-10 ml-3 mt-2 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-graduation-cap py-1"></i>
+            <span id="title">UnTask</span>
           </h1>
-          <div class="text-sm mb-3 ml-3 text-gray-200">Menu</div>
+          <div id="menu" class="text-sm mb-3 ml-2 text-gray-200 duration-300">
+            Menu
+          </div>
           <ul class="space-y-3">
-            <li class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300">
-              <i class="fa-solid fa-chart-line"></i>
-              <span class="ml-3">Dashboard</span>
+            <li
+              class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300 cursor-pointer flex items-center"
+            >
+              <i class="fa-solid fa-chart-line py-1"></i>
+              <span id="dashboard" class="ml-3">Dashboard</span>
             </li>
-            <li class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300">
-              <i class="fa-solid fa-list-check"></i>
-              <span class="ml-3">Daftar&nbsp;Tugas</span>
+            <li
+              class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300 cursor-pointer flex items-center"
+            >
+              <i class="fa-solid fa-list-check py-1"></i>
+              <span id="tugas" class="ml-3">Daftar&nbsp;Tugas</span>
             </li>
-            <li class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300">
-              <i class="fa-solid fa-clock-rotate-left"></i>
-              <span class="ml-3">Riwayat&nbsp;Tugas</span>
+            <li
+              class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300 cursor-pointer flex items-center"
+            >
+              <i class="fa-solid fa-clock-rotate-left py-1"></i>
+              <span id="riwayat" class="ml-3">Riwayat&nbsp;Tugas</span>
             </li>
-            <li class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300">
-              <i class="fa-solid fa-user-large"></i>
-              <span class="ml-3">Akun</span>
+            <li
+              class="px-4 py-2 rounded-md hover:bg-slate-500 duration-300 cursor-pointer flex items-center"
+            >
+              <i class="fa-solid fa-user-large py-1"></i>
+              <span id="akun" class="ml-3">Akun</span>
             </li>
           </ul>
           <div class="h-[1px] bg-gray-300 my-6"></div>
-          <div class="text-lg px-4 py-2 rounded-md hover:bg-red-500 duration-300">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Keluar</span>
+          <div
+            class="text-mb px-4 py-2 rounded-md hover:bg-red-500 duration-300 cursor-pointer flex items-center gap-2"
+          >
+            <i class="fa-solid fa-right-from-bracket py-1"></i>
+            <span id="keluar" >Keluar</span>
           </div>
         </div>
       </nav>
       <main class="ml-2 w-screen">
-        <div class="bg-fuchsia-300 w-32 h-[2000px]"></div>
+        <div class="bg-fuchsia-300 w-32"></div>
       </main>
     </div>
 
+    <script>
+      const toggleSidebar = document.getElementById("toggle-sidebar");
+      const sidebar = document.getElementById("sidebar");
+      const title = document.getElementById("title");
+      const dashboard = document.getElementById("dashboard");
+      const tugas = document.getElementById("tugas");
+      const riwayat = document.getElementById("riwayat");
+      const akun = document.getElementById("akun");
+      const keluar = document.getElementById("keluar");
+
+      const Open = () => {
+        toggleSidebar.classList.toggle("rotate-180");
+        sidebar.classList.toggle("w-[5.4vw]");
+        title.classList.toggle("hidden");
+        dashboard.classList.toggle("hidden");
+        tugas.classList.toggle("hidden");
+        riwayat.classList.toggle("hidden");
+        akun.classList.toggle("hidden");
+        keluar.classList.toggle("hidden");
+      };
+    </script>
   </body>
 </html>
